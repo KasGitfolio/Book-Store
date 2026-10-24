@@ -1,0 +1,225 @@
+/* make html and body full height for sticky footer */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* stack header, content, footer vertically */
+    font-family: -apple-system, "Segoe UI", "Helvetica Neue", sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* header styling */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    border: 1px solid #ccc; /* subtle frame for header */
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+header p, header nav {
+    display: inline;
+    margin-right: 40px;
+    margin-bottom: 40px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #333;
+    margin-right: 15px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+/* page title */
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+    font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+    font-weight: 700;
+    color: #222;
+}
+
+/* container for all books */
+.bookContainer {
+    flex: 1; /* allows main content to expand */
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    border: 1px solid #ddd; /* subtle frame */
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fafafa;
+
+    display: flex;
+    flex-wrap: wrap; /* allow books to wrap to next row */
+    justify-content: space-between; /* space books evenly */
+}
+
+/* individual books */
+.bookContainer .book {
+    flex: 0 1 48%;            /* flex-grow:0, flex-shrink:1, basis:48% */
+    margin-bottom: 20px;      /* space between rows */
+    padding: 15px;
+    box-sizing: border-box;
+    background: #f9f9f9;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* hover effect for books */
+.bookContainer .book:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* book images */
+.bookContainer img {
+    display: block;
+    margin: 0 auto 10px;
+    width: 50%;
+    height: auto;
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+/* book description text */
+.bookContainer p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* buttons */
+.bookContainer button {
+    display: inline-block;
+    padding: 8px 15px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+.bookContainer button:hover {
+    background-color: #45a049;
+}
+
+/* responsive: 1 book per row on small screens */
+@media screen and (max-width: 600px) {
+    .bookContainer .book {
+        flex: 0 1 98%;  /* take almost full width */
+        margin: 1% auto;
+    }
+}
+
+/* payment page styling */
+#body {
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+}
+
+/* framed notes for payment section */
+.bookPayContainer,
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 20px auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #ddd;
+}
+
+/* form elements */
+form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* success and error message */
+#message {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #d9534f;
+    text-align: center;
+}
+
+/* book image on payment page */
+#bookImage {
+    display: block;
+    margin: 10px auto;
+    max-width: 200px;
+    height: auto;
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+/* spacing between sections */
+.bookPayContainer,
+header,
+form {
+    margin-bottom: 20px;
+}
+
+/* footer styling */
+footer {
+    text-align: center;
+    padding: 15px 10px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    font-size: 16px;
+    color: #555;
+}
+
+footer a {
+    text-decoration: none;
+    color: #4CAF50;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #45a049;
+}

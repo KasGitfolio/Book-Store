@@ -1,0 +1,62 @@
+<html>
+<h1>Payment Page</h1>
+    <head>
+        <meta charset="UTF-8">
+        <title>My Books</title> <!--Website name -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">Home</a> <!--Navigate home-->
+        </nav>
+        <p>About Us</p>
+        <p>Contact Us</p>
+</header>
+
+
+<form id ="paymentForm">
+    <div>
+        <label for="fname">First Name</label>
+        <input type="text" id="fName" name="fName" placeholder="Enter your first name"
+        pattern="^[A-Za-z]{2,20}$" title="Letters between 2 and 20 characters in length" required>
+
+        <label for="lName">Surname</label>
+        <input type="text" id="lName" name="lName" placeholder="Enter your surname"
+        pattern="^[A-Za-z]{2,20}$" title="Letters between 2 and 30 characters in length" required>
+    </div>
+
+    <div class="cardPaymentForm">
+
+        <label for="cardNumber">Card Number</label>
+        <input type="text" id="cardNumber" name="cardNumber" placeholder="Enter 16-digit card number" required>
+
+        <label for="expDate">Expiration Date</label>
+        <input type="month" id="expDate" name="expDate" required>
+
+        <label for="cvv">CVV</label>
+        <input type="text" id="cvv" name="cvv" placeholder="3 or 4-digit CVV" required>
+
+        <button type="submit">Continue</button>
+    </div>
+
+    
+
+
+</form>
+
+
+<p id="message"></p>
+
+<script src="js/payment.js"></script>
+<!-- links to payment js file -->
+
+    <footer>
+    <p>My Books Store</p>
+
+    </p>
+    </footer>
+</body>
+
+</html>

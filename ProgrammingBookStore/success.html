@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Successful - My Books Store</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="index.html">Home</a>
+    </nav>
+    <p>About Us</p>
+    <p>Contact Us</p>
+</header>
+
+<div class="bookPayContainer">
+    <h1>Payment successful!</h1>
+    <p>Thank you for your purchase. your payment has been processed successfully.</p>
+    <p>Your payment card ending in <span id="cardLast4">****</span></p>
+    <button onclick="window.location.href='index.html'">Continue shopping</button>
+</div>
+
+<footer>
+    <p>My Books Store</p>
+    </p>
+</footer>
+
+<script>
+    //get last 4 digits from sessionStorage and display
+    const last4 = sessionStorage.getItem("last4");
+    if(last4) {
+        document.getElementById("cardLast4").innerText = "**** **** **** " + last4;
+        sessionStorage.removeItem("last4"); //remove CVV after displaying
+    }
+</script>
+
+</body>
+</html>
